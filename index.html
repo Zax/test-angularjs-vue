@@ -13,8 +13,13 @@
   <script src="app/app.js"></script>
   <script>
   </script>
+    <script src="./static/MyCustomElement.umd.js"></script>
+    <script>
+      MyCustomElement.register()
+    </script>
 </head>
 <body ng-app="testModule">
     <div ui-view></div>
+    <my-custom-element message="Ciao Paolo"></my-custom-element>
 </body>
 </html>
