@@ -20,6 +20,6 @@
         });
     })
     .controller('mainCtrl', function($scope){
-      $scope.prova = 'ciao'
+      $scope.messaggio = 'Ciao!'
     });
 })(window.angular);
