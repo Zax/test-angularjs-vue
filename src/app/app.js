@@ -1,11 +1,13 @@
-(function (angular) {
+import angular from 'angular'
+import uiRouter from 'angular-ui-router'
+
+
+(function () {
   'use strict';
   angular
     .module('testModule',
       [
-        'ui.router',
-        'ngAnimate',
-        'ngSanitize',
+        uiRouter
       ])
     .config(function ($urlRouterProvider) {
       $urlRouterProvider.otherwise('/a');
@@ -14,12 +16,12 @@
       $stateProvider
         .state('statoA', {
           url: '/a',
-          templateUrl: 'app/statoA.html',
+          templateUrl: require('!ngtemplate-loader?relativeTo=/src/app/!html-loader!./statoA.html'),
           controller: 'statoACtrl'
         })
         .state('statoB', {
           url: '/b',
-          templateUrl: 'app/statoB.html',
+          templateUrl: require('!ngtemplate-loader?relativeTo=/src/app/!html-loader!./statoB.html'),
           controller: 'statoBCtrl'
         });
     })
@@ -58,4 +60,4 @@
       };
     })
     ;
-})(window.angular);
+})();
