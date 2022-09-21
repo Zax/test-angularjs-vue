@@ -1,10 +1,10 @@
 <div>
-<h1>Stato B</h1>
-<a ui-sref="statoA">Vai a Stato A</a>
-<hr>
-<h4>Bind AngularJs</h4>
-<label>Messaggio:</label><input ng-model="messaggio"><br>
+  <h1>Stato B</h1>
+  <a ui-sref="statoA">Vai a Stato A</a>
+  <hr>
+  Date format: <input ng-model="format">
+  Current time is: <span my-current-time="format"></span>
   <hr>
   <h4>Custom Element Vue</h4>
-  <my-custom-element message="{{ messaggio }}"></my-custom-element>
+  <my-custom-element message="{{ format }}"></my-custom-element>
 </div>
