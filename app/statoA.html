@@ -6,5 +6,6 @@
   <label>Messaggio:</label><input ng-model="messaggio"><br>
   <hr>
   <h4>Custom Element Vue</h4>
-  <my-custom-element ng-on-updated="onUpdated($event)" message="{{ messaggio }}"></my-custom-element>
+  <my-text ng-on-updated="onUpdated($event)" message="{{ messaggio }}"></my-text>
+  <my-button title="bottone" ng-on-clicked="onClicked($event)"></my-button>
 </div>

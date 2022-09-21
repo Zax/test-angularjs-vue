@@ -28,6 +28,9 @@
       $scope.onUpdated = function(event) {
         console.log('updated', event)
       }
+      $scope.onClicked = function(event) {
+        console.log('clicked', event)
+      }
     })
     .controller('statoBCtrl', function($scope){
       $scope.format = 'M/d/yy h:mm:ss a';
