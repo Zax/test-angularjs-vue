@@ -25,6 +25,9 @@
     })
     .controller('statoACtrl', function($scope){
       $scope.messaggio = 'Ciao, sei in stato A!'
+      $scope.onUpdated = function(event) {
+        console.log('updated', event)
+      }
     })
     .controller('statoBCtrl', function($scope){
       $scope.format = 'M/d/yy h:mm:ss a';

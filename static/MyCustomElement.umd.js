@@ -14815,9 +14815,9 @@ const initDirectivesForSSR = () => {
 };
 
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/MyCustomElement.ce.vue?vue&type=template&id=6be79102
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/MyCustomElement.ce.vue?vue&type=template&id=fc3fddee
 
-function MyCustomElement_cevue_type_template_id_6be79102_render(_ctx, _cache, $props, $setup, $data, $options) {
+function MyCustomElement_cevue_type_template_id_fc3fddee_render(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock(runtime_core_esm_bundler_Fragment, null, [createBaseVNode("div", null, toDisplayString($props.message), 1), withDirectives(createBaseVNode("input", {
     "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => $data.value = $event)
   }, null, 512), [[vModelText, $data.value]])], 64);
@@ -14829,7 +14829,7 @@ function MyCustomElement_cevue_type_template_id_6be79102_render(_ctx, _cache, $p
   },
   watch: {
     value(newValue) {
-      this.$emit('change', newValue);
+      this.$emit('updated', newValue);
       console.log('change');
     }
 
@@ -14848,9 +14848,9 @@ function MyCustomElement_cevue_type_template_id_6be79102_render(_ctx, _cache, $p
 });
 ;// CONCATENATED MODULE: ./src/MyCustomElement.ce.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/vue-loader/dist/styleInlineLoader.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-54.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/MyCustomElement.ce.vue?vue&type=style&index=0&id=6be79102&inline&lang=css
-/* harmony default export */ var MyCustomElement_cevue_type_style_index_0_id_6be79102_inline_lang_css = ("\ndiv {\n    color: red;\n}\n");
-;// CONCATENATED MODULE: ./src/MyCustomElement.ce.vue?vue&type=style&index=0&id=6be79102&inline&lang=css
+;// CONCATENATED MODULE: ./node_modules/vue-loader/dist/styleInlineLoader.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-54.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/MyCustomElement.ce.vue?vue&type=style&index=0&id=fc3fddee&inline&lang=css
+/* harmony default export */ var MyCustomElement_cevue_type_style_index_0_id_fc3fddee_inline_lang_css = ("\ndiv {\n    color: red;\n}\n");
+;// CONCATENATED MODULE: ./src/MyCustomElement.ce.vue?vue&type=style&index=0&id=fc3fddee&inline&lang=css
  
 // EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(1620);
@@ -14862,7 +14862,7 @@ var exportHelper = __webpack_require__(1620);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(MyCustomElement_cevue_type_script_lang_js, [['render',MyCustomElement_cevue_type_template_id_6be79102_render],['styles',[MyCustomElement_cevue_type_style_index_0_id_6be79102_inline_lang_css]]])
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(MyCustomElement_cevue_type_script_lang_js, [['render',MyCustomElement_cevue_type_template_id_fc3fddee_render],['styles',[MyCustomElement_cevue_type_style_index_0_id_fc3fddee_inline_lang_css]]])
 
 /* harmony default export */ var MyCustomElement_ce = (__exports__);
 ;// CONCATENATED MODULE: ./src/MyCustomElementLib.js
