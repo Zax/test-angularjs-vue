@@ -1,9 +1,10 @@
 {
   "main": "index.html",
   "scripts": {
-    "build-wc": "vue-cli-service build --name=VueLibrary --formats=umd-min --modern --dest=app/wc --target=lib --inline-vue vue/VueLibrary.js",
+    "build-wc": "vue-cli-service build --name=VueLibrary --formats=umd-min --modern --dest=src/app/wc --target=lib --inline-vue vue/VueLibrary.js",
     "watch-vue": "watch 'npm run build-wc' ./vue",
-    "build": "webpack"
+    "build": "webpack --config webpack.prod.js",
+    "serve": "webpack-dev-server --hot --config webpack.dev.js"
   },
   "dependencies": {
     "angular": "1.8.2",
@@ -15,8 +16,10 @@
   },
   "devDependencies": {
     "@vue/cli-service": "~5.0.0",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
     "html-loader": "^4.1.0",
-    "ngtemplate-loader": "^2.1.0",
+    "style-loader": "^3.3.1",
     "vue": "^3.2.13",
     "watch": "^1.0.2",
     "webpack": "^5.74.0",

@@ -1,9 +1,11 @@
 import angular from 'angular'
 import uiRouter from 'angular-ui-router'
-
+import * as VueLibrary from './wc/VueLibrary.umd.min.js'
+import './app.css'
 
 (function () {
   'use strict';
+  VueLibrary.register()
   angular
     .module('testModule',
       [
@@ -16,12 +18,12 @@ import uiRouter from 'angular-ui-router'
       $stateProvider
         .state('statoA', {
           url: '/a',
-          templateUrl: require('!ngtemplate-loader?relativeTo=/src/app/!html-loader!./statoA.html'),
+          template: require('./statoA.html').default,
           controller: 'statoACtrl'
         })
         .state('statoB', {
           url: '/b',
-          templateUrl: require('!ngtemplate-loader?relativeTo=/src/app/!html-loader!./statoB.html'),
+          template: require('./statoB.html').default,
           controller: 'statoBCtrl'
         });
     })
