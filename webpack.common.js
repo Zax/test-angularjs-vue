@@ -1,9 +1,20 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/app/app.js',
-  plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
+  plugins: [
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new CopyWebpackPlugin({
+        patterns: [
+            {
+                from: "**/*.lazy.html",
+                to: "[path][name][ext]",
+            },
+        ],
+      }),
+  ],
   module: {
     rules: [
         {
@@ -20,7 +31,7 @@ module.exports = {
             ]
         },
         {
-            exclude: /index\.html/,
+            exclude: [/\.lazy\.html$/, /index\.html/],
             test: /\.html$/,
             use: [
                 { loader: 'html-loader' }

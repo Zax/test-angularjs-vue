@@ -18,7 +18,7 @@ import './app.css'
       $stateProvider
         .state('statoA', {
           url: '/a',
-          template: require('./statoA.html').default,
+          templateUrl: '/src/app/statoA.lazy.html',
           controller: 'statoACtrl'
         })
         .state('statoB', {
