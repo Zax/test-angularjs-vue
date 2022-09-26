@@ -1,6 +1,5 @@
 import angular from 'angular'
 import uiRouter from 'angular-ui-router'
-import statoA from './statoA'
 import * as VueLibrary from './wc/VueLibrary.umd.min.js'
 import './app.css'
 
@@ -10,22 +9,10 @@ import './app.css'
   angular
     .module('testModule',
       [
-        uiRouter,
-        'statoA'
+        uiRouter
       ])
     .config(function ($urlRouterProvider) {
       $urlRouterProvider.otherwise('/a');
-    })
-    .config(function ($stateProvider) {
-      $stateProvider
-        .state('statoB', {
-          url: '/b',
-          template: require('./statoB.html').default,
-          controller: 'statoBCtrl'
-        });
-    })
-    .controller('statoBCtrl', function($scope){
-      $scope.format = 'M/d/yy h:mm:ss a';
     })
     .directive('myCurrentTime', function($interval, dateFilter) {
       function link(scope, element, attrs) {
@@ -49,5 +36,8 @@ import './app.css'
         link: link
       };
     })
-    
+
+    // load all angularjs submodules
+    function requireAll(r) {r.keys().forEach(r);}
+    requireAll(require.context('./', true, /\.js$/));
 })();

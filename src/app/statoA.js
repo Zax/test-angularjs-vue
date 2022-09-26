@@ -2,8 +2,9 @@ import angular from 'angular'
 
 (function () {
     'use strict';
+    console.log('statoA')
     angular
-      .module('statoA', [])
+      .module('testModule')
       .config(function ($stateProvider) {
         $stateProvider
           .state('statoA', {
