@@ -15,8 +15,10 @@
     "angular-ui-router": "1.0.30"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.19.1",
     "@vue/cli-service": "~5.0.0",
     "babel-loader": "^8.2.5",
+    "babel-plugin-angularjs-annotate": "^0.10.0",
     "copy-webpack-plugin": "^9.1.0",
     "css-loader": "^6.7.1",
     "html-loader": "^4.1.0",
