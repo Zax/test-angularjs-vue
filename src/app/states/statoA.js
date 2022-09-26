@@ -9,7 +9,7 @@ import angular from 'angular'
         $stateProvider
           .state('statoA', {
             url: '/a',
-            templateUrl: '/src/app/statoA.lazy.html',
+            templateUrl: '/src/app/states/statoA.lazy.html',
             controller: 'statoACtrl'
           })
       })

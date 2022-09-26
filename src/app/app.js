@@ -39,5 +39,5 @@ import './app.css'
 
     // load all angularjs submodules
     function requireAll(r) {r.keys().forEach(r);}
-    requireAll(require.context('./', true, /\.js$/));
+    requireAll(require.context('./states', true, /\.js$/));
 })();
